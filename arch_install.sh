@@ -301,22 +301,16 @@ install_packages() {
     local packages=''
 
     # General utilities/libraries
-    packages+=' alsa-utils aspell-en chromium cpupower gvim mlocate net-tools ntp openssh p7zip pkgfile powertop python python2 rfkill rsync sudo unrar unzip wget zip systemd-sysvcompat zsh grml-zsh-config'
+    packages+=' alsa-utils aspell-en cpupower gvim mlocate net-tools ntp openssh p7zip pkgfile powertop python python2 rfkill rsync sudo unrar unzip wget zip zsh grml-zsh-config'
 
     # Development packages
-    packages+=' apache-ant cmake gdb git maven mercurial subversion tcpdump valgrind wireshark-gtk'
+    packages+=' apache-ant cmake gdb git maven mercurial subversion tcpdump valgrind'
 
     # Netcfg
     if [ -n "$WIRELESS_DEVICE" ]
     then
         packages+=' netcfg ifplugd dialog wireless_tools wpa_actiond wpa_supplicant'
     fi
-
-    # Java stuff
-    packages+=' icedtea-web-java7 jdk7-openjdk jre7-openjdk'
-
-    # Libreoffice
-    packages+=' libreoffice-calc libreoffice-en-US libreoffice-gnome libreoffice-impress libreoffice-writer hunspell-en hyphen-en mythes-en'
 
     # Misc programs
     packages+=' mplayer pidgin vlc xscreensaver gparted dosfstools ntfsprogs'
